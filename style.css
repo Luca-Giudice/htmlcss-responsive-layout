@@ -16,7 +16,7 @@ body{
 }
 
 .container{
-    max-width: 100%;
+    
     width: 480px;
     margin: 0 auto;
     padding: 0 30px;
@@ -43,6 +43,7 @@ header{
     background-color: rgb(0,132,253);
     height: 50px;
     width: 100%;
+    padding: 5px 0;
 }
 
 .navbar{
@@ -52,6 +53,10 @@ header{
     align-items: center;
 }
 
+.menu{
+    display: none;
+}
+
 /* main */
 
 .violet{
@@ -59,6 +64,8 @@ header{
 }
 
 .row{
+   display: flex;
+   flex-direction: column;
     flex-wrap: wrap;
     padding-top: 70px;
 }
@@ -69,12 +76,12 @@ header{
 }
 
 .card{
-    height: 400px;
+    height: 100%;
     background-color: rgb(181,221,255);
     border-radius: 50px;
     font-size: 17px;
     line-height: 30px;
-    padding: 0 30px;
+    padding: 5px 30px;
     padding-top: 20px;
     text-align: center;
     color: rgb(90,110,127);
@@ -87,7 +94,7 @@ header{
 
 .card > i{
     color: rgb(0,132,253);
-    font-size: 0px;
+    font-size: 80px;
 }
 
 h3{
@@ -175,7 +182,9 @@ h2{
 
 }
 
-.person > h3{
+
+
+.text > h3{
     color: white;
 }
 
@@ -225,18 +234,18 @@ h2{
     text-align: start;
 }
 
-.ab > h2{
+.intro > h2{
     color:  rgb(151,146,228);
     padding: 20px 0;
 
 }
 
-.ab > p{
+.intro > p{
     margin-bottom: 20px;
     line-height: 30px;
 }
 
-.ab > img{
+.profile > img{
     width: 180px;
     padding: 20px;
     border-radius: 20px;
@@ -310,3 +319,89 @@ footer{
 }
 
 
+/* media quesry tablet*/
+
+@media screen and (min-width: 768px) {
+    .container{
+        width: 760px;
+
+    }
+    .row{
+        display: flex;
+        flex-direction: row;
+    }
+
+
+    .col{
+        width: calc(100% / 3);
+    }
+
+    .card{
+        font-size: 15px;
+    }
+    
+    .testimonial > .row{
+        display: block;
+
+    }
+
+    .personal{
+        width: 100%;
+    }
+
+    .person{
+        display: flex;
+    }
+    
+    .text > h3{
+        color: white;
+    }
+
+    .ab{
+        display: flex;
+        padding: 10px;
+        gap: 20px;
+    }
+
+    .intro{
+        width: 60%;
+        gap: 20px;
+    }
+
+    .profile{
+        width: 40%;
+    }
+
+    .profile > img{
+        width: 50%;
+    }
+}
+
+
+@media screen and (min-width: 992px) {
+    .container{
+        width: 900px;
+    }
+
+    .fa-bars{
+        display: none;
+    }
+
+    .menu{
+        display: flex;
+    }
+
+    ul{
+        display: flex;
+        gap: 20px;
+        list-style-type: none;
+    }
+
+    li > button{
+        padding: 7px 9px;
+        border: 0;
+        background-color: white;
+        border-radius: 20px;
+    }
+    
+}
